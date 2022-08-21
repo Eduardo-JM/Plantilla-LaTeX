@@ -16,3 +16,7 @@
 !**.tex
 !**.bib
 !**.pdf
+
+_run.tex
+**/boxes/**
+**/pictures/**
