@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+	% Nuestro dibujo
+	% Dibuja Coord A 
+	% Línea recta --
+	% Coord B que es (A(x) + 0, A(y) + (- 1))
+	% Trazos rectos horizontales y luego verticales
+	% Cood C
+	\draw [-{Stealth}] (0,2) -- ++(0,-1) -| (5,-3);
+	\draw [->] (0,2) -- ++(0,-1) -| (-5,-3);
+	
+	\draw (-3, 2) rectangle (3,4);
+	\node [left] at (0,3) {Nivel 1};
+	\node [right] at (0,3) {Nivel a};
+\end{tikzpicture}

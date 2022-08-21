@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover page
+\makeatletter
+	\newlength{\imagewidth}
+	\newlength{\imageheight}
+	\newlength{\imagesize}
+	
+	
+	\setlength\imageheight{20mm}
+	\setlength\imagewidth{12.5mm}
+	\setlength\imagesize{21.9mm}
+	
+	\newcommand{\makeipnheader}{
+		\begin{minipage}[t]{\textwidth}
+			\begin{minipage}{\imagesize}
+				\includegraphics[
+					width=\imagewidth,
+					height=\imageheight,
+					keepaspectratio
+				]{logos/IPN.png}
+				\newline
+		    		\raggedright\footnotesize{DTA-PPT-01}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{\dimexpr\linewidth - 2\imagesize\relax - \imagewidth}
+				\bgroup
+					\scshape
+        			\begin{center}            			
+           				\fontsize{12pt}{12pt}\selectfont
+           				\textbf{INSTITUTO POLITÉCNICO NACIONAL}\\
+           				\fontsize{9pt}{9pt}\selectfont
+           				UNIDAD PROFESIONAL INTERDISCIPLINARIA EN INGENIERÍA Y TECNOLOGÍAS AVANZADAS\\
+           				\fontsize{10pt}{10pt}\selectfont
+           				\textbf{PROTOCOLO}\\
+           				\fontsize{14pt}{14pt}\selectfont
+           				\textbf{INGENIERÍA EN ENERGÍA}	            		
+        			\end{center}
+       			\egroup
+			\end{minipage}
+			\hfill
+			\begin{minipage}{\imagesize}
+		        	\includegraphics[
+		        		width=\imagesize,
+		        		height=\imageheight,
+		        		keepaspectratio
+		        	]{logos/UPIITA.png}
+		    	\end{minipage}
+		\end{minipage}
+	}
+	
+\makeatother
+
+\makeatletter
+	\newenvironment{coverpage}{%
+		\newgeometry{
+			top=10mm,
+			left=20mm,
+			right=20mm,
+			headsep=0pt,
+			headheight=27mm,
+			footskip=7mm,
+			includehead
+		}
+		\thispagestyle{fancycover}
+	}
+	{
+		\vfill
+		\newpage
+		\restoregeometry
+		\pagestyle{generalfancy}
+	}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math conditions
+
+% Usage
+%\begin{conditions} key & description \end{conditions}
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}:{}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
+
+% Usage
+%\begin{conditions*} key & symbol & description \end{conditions*}
+
+\newenvironment{conditions*}
+  {\par\vspace{\abovedisplayskip}\noindent
+   \tabularx{\columnwidth}{>{$}l<{$} @{}>{${}}c<{{}$}@{} >{\raggedright\arraybackslash}X}}
+  {\endtabularx\par\vspace{\belowdisplayskip}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% abstract
+\makeatletter
+	\renewenvironment{abstract}{%
+		\if@twocolumn
+			\chapter*{\abstractname}%
+		\else %% <- here I've removed \small
+			\begin{center}%
+				{\normalfont\fontsize{16}{15}\bfseries\abstractname\vspace{\z@}}
+			\end{center}%
+		\quotation
+		\fi
+	}
+	{
+		\if@twocolumn\else\endquotation\fi
+	}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table
+
+% tabularray permite envolver el contenido de una
+% celda en un comando o environment. Este comando
+% se usa para celdas que incluyen tikz como parte de
+% su contenido. Véase la metodología para un ejemplo de uso
+
+% To create cells wrapped by commands
+\NewDocumentCommand{\adjusttikzpic}{m}{%
+  \adjustbox{valign=m}{%
+  	\inputtikz{#1}
+  }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

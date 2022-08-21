@@ -1,0 +1,202 @@
+%\thispagestyle{fancycover}
+\bgroup
+	\fontsize{9pt}{9pt}\selectfont
+	\begin{tblr}{
+		width=\linewidth,
+		colspec = { *{12}X },
+		hlines,
+		vlines,
+		stretch=1.5,
+		row{1} = {
+			bg = green,
+			font =  \bfseries
+		},
+		rows = {m}
+	}
+		% Título del protocolo %
+		\SetCell[c=12]{c}
+		TÍTULO DEL PROTOCOLO &&&&&&&&&&&\\ %
+		%
+		\SetCell[c=12]{l,\linewidth}
+		\textbf{\printtitle}
+		&&&&&&&&&&& \\ 
+		% Datos del protocolo%
+		\SetRow{green}
+		\SetCell[c=12]{c}
+			\textbf{DATOS DEL PROTOCOLO} &&&&&&&&&&&
+		\\ 
+		\SetCell[c=5]{r}
+			{
+			\textbf{Número de revisión}\\
+			\scriptsize{(Primera, segunda tercera o Protocolo para registro)}
+			}
+		&&&&&
+		\SetCell[c=2]{c}
+			\textbf{XXXXXXX}
+		&&
+		\SetCell[c=3]{r}
+			\textbf{Semestre} &&&
+		\SetCell[c=2]{c}
+			\textbf{2023-1} 
+		&\\ 
+		\SetCell[c=5]{r}
+			{
+			\textbf{Número de proyecto asignado} \\
+			\scriptsize{(Número asignado por el profesor de especialidad)}
+			}
+		&&&&&
+		\SetCell[c=2]{c}
+			\centering \textbf{1}
+		&&
+		\SetCell[c=3]{r}
+			{
+			\textbf{Fecha}\\
+			\scriptsize{(Fecha programada)}
+			}
+		&&&
+		\SetCell[c=2]{c}
+			\centering \textbf{\printdate}
+		&\\ 
+		\SetCell[c=5]{r}
+			{
+			\textbf{Confidencialidad} \\
+			\scriptsize{(Público o confidencial, incluir documento que lo avale)}
+			}
+		&&&&&
+		\SetCell[c=2]{c}
+			\centering \textbf{Público}
+		&&
+		\SetCell[c=3]{r}
+			{
+			\textbf{Número de Hojas}\\
+			\scriptsize{(Cantidad de Hojas del Protocolo)}
+			}
+		&&&
+		\SetCell[c=2]{c}
+			\centering \textbf{\pageref{LastPage}}
+		&\\ 
+		\SetCell[c=7]{r}
+			{
+			\textbf{Patrocinador} \\
+			\scriptsize{(En caso de existir, incluir el nombre en caso contrario dejar en blanco)}
+			}
+		&&&&&&&
+		\SetCell[c=5]{c} { Modificar o quitar este texto } &&&& \\ 
+		\SetCell[c=7]{r}
+			{
+			\textbf{Número Convenio o Registro} \\
+			\scriptsize{(Incluir número de convenio patrocinio o número de proyecto de investigación que patrocina)}
+			}
+		&&&&&&&
+		\SetCell[c=5]{c} { Modificar o quitar este texto } &&&&\\ 
+	\end{tblr}
+\egroup
+
+\bgroup
+	\fontsize{8pt}{8pt}\selectfont
+	\begin{tblr}{
+		width=\linewidth,
+		colspec = { *{12}X },
+		hlines,
+		vlines,
+		stretch=1.2,
+		row{1} = {
+			bg = green
+		},
+		rows = {m}
+	}
+		\SetCell[c=12]{c}
+			\centerline{ALUMNO 1}
+		&&&&&&&&&&&\\ 
+		% Datos alumno %
+		\SetRow{ultralightgreen}
+		\SetCell[c=8]{c}
+			DATOS ALUMNO 1
+		&&&&&&&&
+		\SetCell[c=4]{c}
+			FIRMA
+		&&&\\ 
+		% Inicio datos%
+		\SetCell[c=3]{r}
+			Nombre del alumno
+		&&&
+		\SetCell[c=5]{l}
+			Mi nombre va aquí
+		&&&&&
+		\SetCell[c=4,r=4]{c} ~&&&\\
+		\SetCell[c=3]{r}
+			Número de boleta
+		&&&
+		\SetCell[c=5]{l}
+			\raggedright 2010640000
+		&&&&&
+		\SetCell[c=4]{c} &&&\\
+		\SetCell[c=3]{r}
+			Teléfono
+		&&&
+		\SetCell[c=5]{l}
+			+52 1 5555 555 555
+		&&&&&
+		\SetCell[c=4]{c} ~&&&\\
+		\SetCell[c=3]{r}
+			Correo electrónico
+		&&&
+		\SetCell[c=5]{l}
+			micorreoinstitucional@alumno.ipn.mx
+		&&&&&
+		\SetCell[c=4]{c} ~&&&\\ 
+	\end{tblr}
+	
+	\begin{tblr}{
+		width=\linewidth,
+		colspec = { *{3}X X[1.5] X X[-2] X X[-3] *{4}X},
+		hlines,
+		vlines,
+		row{1} = {
+			bg = green
+		},
+		rows = {m},
+	}
+		% ASESOR %
+		\SetCell[c=8]{c,0.666\linewidth - 2\tabcolsep}
+			DATOS ASESOR 1
+		&&&&&&&& 
+		\SetCell[c=4]{c,0.333\linewidth - 2\tabcolsep}
+			VISTO BUENO ASESOR 1
+		&&&\\ 
+		\SetCell[c=3]{r}
+			Nombre Asesor \scriptsize{(Grado Académico)}
+		&&&
+		\SetCell[c=5]{r}
+			El nombre del asesor va aquí
+		&&&&&
+		\SetCell[c=4,r=4]{c} ~ &&& \\
+		%%%%
+		\SetCell[c=3]{r}
+			Academia
+		&&&
+		% En el segundo asesor borrar la footnotemark
+		XXXXXXXXXXX	& Interno & X & {Externo\footnotemark[1]} & ~ &
+		\SetCell[c=4]{c}
+		~ &&&
+		\\
+		%%%%
+		\SetCell[c=3]{r}
+			Cédula profesional \scriptsize{(Obligatorio)}
+		&&&
+		\SetCell[c=5]{c}
+			XXXXXXX
+		&&&&&
+		\SetCell[c=4]{c} ~ &&&\\
+		%%%%
+		\SetCell[c=3]{r}
+			Correo electrónico
+		&&&
+		\SetCell[c=5]{c}
+			correodelasesor@ipn.mx
+		&&&&&
+		\SetCell[c=4]{c} ~ &&&\\ 
+	\end{tblr}
+\egroup
+
+\footnotetext[1]{\fontsize{8pt}{8pt}\selectfont En caso de Asesores Externos, deberá incluirse copia de su Cédula Profesional y Curriculum Vitae resumido en un archivo anexo al Protocolo.}

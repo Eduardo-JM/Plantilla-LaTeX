@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configuración del documento
+
+\usepackage[english,spanish,es-tabla]{babel}
+\usepackage[
+	letterpaper,
+	top=18mm,
+	bottom=20mm,
+	right=20mm,
+	left=25mm
+]{geometry}
+% En caso de no querer usar setlenght
+%\usepackage[parfill]{parskip}
+\usepackage{multicol}
+
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fuentes, codicación
+
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Matemáticas y química
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{siunitx}
+\usepackage{xfrac}
+
+\usepackage[
+	modules={reactions,formula,redox,charges}
+]{chemmacros}[2022/03/11]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hipervínculos, referencias
+% y glosarios
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[spanish]{cleveref}
+
+\usepackage[
+	translate=true,
+	toc,
+	acronym
+]{glossaries}
+\usepackage{glossary-mcols}
+
+\usepackage[
+	backend=biber,
+	style=ieee,
+%	Para apa usar
+%	style=apa,
+%	citestyle=apa,
+	hyperref=true,
+	url=false
+]{biblatex}
+
+\usepackage[thresholdtype=words]{csquotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tipografía y colores
+
+\usepackage{xcolor}
+\usepackage[shortlabels]{enumitem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tablas y Figuras
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+\usepackage{tabularray}
+\UseTblrLibrary{varwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dibujos y diagramas
+
+\usepackage{tikz}
+% Figuras geométricas, flechas, sombreado, cálculos y patrones
+\usetikzlibrary{
+	shapes.geometric,
+	arrows.meta,
+	shadows,
+	calc,
+	patterns,
+	patterns.meta
+}
+% Usada para unos dibujos, quitar si quieres
+\usepackage{chemplants}
+
+% Cajas de colores
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{raster}
+\tcbuselibrary{external}
+% NUNCA COMBINAR BREAKABLE Y EXTERNAL
+\tcbuselibrary{breakable}
+\tcbset{external/prefix=boxes/}
+\tcbEXTERNALIZE
+
+% Externalización
+% Se necesita compilar con la bandera --shell-escape
+\usetikzlibrary{external}
+
+% Árboles (se usa para los diagramas)
+\usepackage[edges, external]{forest}
+\tikzexternalize[prefix=pictures/]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Utilidades
+
+\usepackage{adjustbox}
+\usepackage{pdfpages}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

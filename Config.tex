@@ -1,0 +1,152 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto y tipografía
+
+% Vea CTAN parskip si prefiere eso
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}
+
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries}
+    {\chaptertitlename\ \thechapter}
+    {20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lenguaje y localización
+
+\selectlanguage{spanish}
+
+\crefname{table}{\spanishtablename}{\spanishtablename}
+
+\crefname{figure}{fig.}{figs.}
+\Crefname{figure}{Fig.}{Figs.}
+
+\crefname{reaction}{reacción}{reacciones}
+\Crefname{Reaction}{Reacción}{Reacciones}
+
+\crefname{section}{sección}{secciones}
+\Crefname{Section}{Sección}{Secciones}
+
+\decimalpoint
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Imágenes
+
+\graphicspath{{./figures}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tablas
+
+\DefTblrTemplate{contfoot-text}{normal}{\scriptsize Continua en la siguiente página}
+\SetTblrTemplate{contfoot-text}{normal}
+\DefTblrTemplate{conthead-text}{normal}{(Continuación)}
+\SetTblrTemplate{conthead-text}{normal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colores del documento
+
+\definecolor{primary}{HTML}{082D70}
+\definecolor{primary-var}{HTML}{3059A8}
+\definecolor{secondary}{HTML}{086070}
+\definecolor{secondary-var}{HTML}{35BAE5}
+%\definecolor{primary-accent}{HTML}{000000}
+%\definecolor{secondary-accent}{HTML}{000000}
+\definecolor{background}{HTML}{E7EBF4}
+
+% Color del politécnico
+\definecolor{cherry}{RGB}{90, 18, 54}
+
+%% Cover page
+\definecolor{ultralightgreen}{RGB}{244, 249, 241}
+\definecolor{green}{RGB}{146, 208, 80}
+
+
+% Other colors
+\definecolor{urlColor}{RGB}{89,156,255}
+
+% Other colors
+\definecolor{lightblue}{RGB}{176, 221, 255}
+\definecolor{lilac}{RGB}{174, 182, 211}
+\definecolor{lightgreen}{RGB}{150, 240, 180}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Matemáticas y química
+
+\sisetup{
+	per-mode=symbol,
+	sticky-per,
+	exponent-mode = engineering
+}
+
+%\DeclareSIUnit\day{day}
+
+\chemsetup{
+	reactions/own-counter = true
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hipervínculos, referencias
+% y glosarios
+
+\DeclareFieldFormat{url}{%
+%  \mkbibacro{URL}\addcolon\space
+	\href{#1}{%
+		\nolinkurl{\thefield{urlraw}}%
+	}%
+}
+
+\hypersetup{
+	colorlinks = true,
+	linkcolor = black,
+	citecolor = primary,
+	urlcolor = urlColor
+}
+
+\newglossarystyle{custommcolalttree}{%
+	\setglossarystyle{mcolalttree}%
+	\renewcommand{\glossaryheader}{\vspace{\dimexpr -\baselineskip -\parskip}}
+}
+
+\makeglossaries
+\loadglsentries{bib/glossary.tex}
+\loadglsentries{bib/acronym.tex}
+
+\addbibresource{bib/References.bib}
+
+\setquotestyle[mexican]{spanish}
+\SetBlockThreshold{40}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Headers & Footers
+
+\fancypagestyle{generalfancy}{%
+	\fancyhf{}
+	\rfoot{\thepage}
+}
+
+\fancypagestyle{fancycover}{%
+	\fancyhead[C]{\makeipnheader}
+	\renewcommand{\footrulewidth}{0.5pt}
+	\fancyfoot[L]{%
+		\noindent\justifying\tiny\textcolor{gray!80}{%
+			\textbf{AVISO DE PRIVACIDAD}: Los datos recabados serán protegidos, incorporados y tratados por el Departamento de Tecnologías Avanzadas de la UPIITA, cuya finalidad es el uso de los mismos exclusivamente para el proceso de registro de protocolos y proyectos de trabajo terminal y proyecto terminal, para la titulación por opción curricular de las carreras de Ingeniería Biónica, Ingeniería Mecatrónica, Ingeniería Telemática e Ingeniería en Sistemas Automotrices. El responsable de los datos personales es el Departamento de Tecnologías Avanzadas, perteneciente a la Subdirección Académica de la Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas del IPN, donde el interesado podrá ejercer los derechos de acceso y corrección en la dirección: Av. Instituto Politécnico Nacional No. Col. Barrio la Laguna Ticomán, Gustavo A. Madero, México DF, CP. 07340, en el Edificio 1 primer piso. Lo anterior se informa en cumplimiento del Decimoséptimo de los Lineamientos de Protección de Datos Personales, publicados en el Diario Oficial de la Federación el 30 de septiembre de 2005.%
+		}%
+	}%
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

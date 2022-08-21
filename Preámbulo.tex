@@ -1,0 +1,49 @@
+\input{Packages.tex}
+\input{Config.tex}
+\input{CustomKeys.tex}
+\input{ComplexCommands.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comandos del documento
+
+\makeatletter                       
+	\def\printauthor{\@author}
+	\def\printdate{\@date}
+	\def\printtitle{\@title}
+\makeatother
+
+\providecommand{\keywords}[2][Palabras clave]{
+  \small	
+  \textbf{\textit{#1 ---}} #2
+}
+% Comando para incluir figuras tikz
+% El argumento recibido es el archivo a dibujar
+\NewDocumentCommand{\inputtikz}{m}{
+	\tikzsetnextfilename{#1}
+	\input{tikz/#1.tex}
+}
+
+% Comando para incluir diagramas tikz (forest)
+% El argumento recibido es el archivo a dibujar
+\NewDocumentCommand{\inputdiagram}{m}{
+	\input{diagrams/#1.tex}
+}
+
+% Comando para incluir cajas de colores (tcolorbox)
+% El argumento recibido es la caja a crear
+\NewDocumentCommand{\inputtcb}{m}{%
+	\input{tcolorbox/#1.tex}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Datos del documento
+
+\title{TÍTULO DE TU PROTOCOLO DE INVESTIGACIÓN, MENOR A CIERTA EXTENSIÓN}
+\date{fecha de entrega}
+\author{Autor del documento}
+
+% Para la fecha de hoy
+%\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						

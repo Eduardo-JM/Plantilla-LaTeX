@@ -1,0 +1,46 @@
+\begin{forest}
+	curly bracket edges,
+	for tree = {
+		anchor = center,
+		rect,
+		if = {level == 0}{
+			l sep = 10mm,
+			outer color= lilac,
+			text width = 0.25\linewidth,
+			for tree = {
+		        for children = {
+		            grow'=0,
+		            arrowed folder
+		        }
+		    }
+		}{},
+		if = {level == 1}{
+			outer color= lightblue,
+			text width = 0.20\linewidth,
+		}{},
+		if = {level == 2}{
+			outer color= lightgreen,
+			text width = 0.15\linewidth
+		}{},
+	},
+	[Nivel 0
+		[Nivel 1.1
+			[Nivel 2.1.1]
+			[Nivel 2.1.2]
+			[Nivel 2.1.3]
+		]
+		[Nivel 1.2
+			[Nivel 2.2.1]
+			[Nivel 2.2.2]
+		]
+		[Nivel 1.3
+			[Nivel 2.3.1]
+			[Nivel 2.3.2]
+		]
+		[Nivel 1.4
+			[Nivel 2.4.1]
+			[Nivel 2.4.2]
+			[Nivel 2.4.3]
+		]
+	]
+\end{forest}

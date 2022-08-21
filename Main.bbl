@@ -1,0 +1,136 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{itriago_c_planteamiento_2011}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ae66cd74505313101d773a2628167684}{%
+           family={Itriago\bibnamedelima C},
+           familyi={I\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={María},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7b744efa8e26e1be8b19895ca3cb6eb8}{%
+           family={Zerpa},
+           familyi={Z\bibinitperiod},
+           given={Carlos\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc89b05b7e3e469e33f70dc46bf8fc86}
+      \strng{fullhash}{dc89b05b7e3e469e33f70dc46bf8fc86}
+      \strng{bibnamehash}{dc89b05b7e3e469e33f70dc46bf8fc86}
+      \strng{authorbibnamehash}{dc89b05b7e3e469e33f70dc46bf8fc86}
+      \strng{authornamehash}{dc89b05b7e3e469e33f70dc46bf8fc86}
+      \strng{authorfullhash}{dc89b05b7e3e469e33f70dc46bf8fc86}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0798-4065}
+      \field{journaltitle}{Revista de la Facultad de Ingeniería Universidad Central de Venezuela}
+      \field{langid}{spanish}
+      \field{month}{9}
+      \field{note}{Publisher: Universidad Central de Venezuela}
+      \field{number}{3}
+      \field{title}{El planteamiento del problema en el proyecto de investigación en ingeniería}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{26}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{39\bibrangedash 54}
+      \range{pages}{16}
+      \verb{urlraw}
+      \verb http://ve.scielo.org/scielo.php?script=sci_abstract&pid=S0798-40652011000300005&lng=es&nrm=iso&tlng=es
+      \endverb
+      \verb{url}
+      \verb http://ve.scielo.org/scielo.php?script=sci_abstract&pid=S0798-40652011000300005&lng=es&nrm=iso&tlng=es
+      \endverb
+    \endentry
+    \entry{nadeeshani_nicotinamide_2022}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6b5a7fb81b68d960907ca74d43d2200e}{%
+           family={Nadeeshani},
+           familyi={N\bibinitperiod},
+           given={Harshani},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d5550520ea35f2cd349ec63024aacb39}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jinyao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=81eac47e9a0e8bbfdd9d3ead2e9a3b6d}{%
+           family={Ying},
+           familyi={Y\bibinitperiod},
+           given={Tianlei},
+           giveni={T\bibinitperiod}}}%
+        {{hash=569e2d07ae65b5ff0a054a1b8113f361}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Baohong},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3e07c2e8303e07b76e6d8594a784bd0e}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4bcfc1c8b0a09fefb54a3c1203b4920}
+      \strng{fullhash}{c2618cf59021e3ee6c974570799bb03f}
+      \strng{bibnamehash}{c2618cf59021e3ee6c974570799bb03f}
+      \strng{authorbibnamehash}{c2618cf59021e3ee6c974570799bb03f}
+      \strng{authornamehash}{f4bcfc1c8b0a09fefb54a3c1203b4920}
+      \strng{authorfullhash}{c2618cf59021e3ee6c974570799bb03f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{issn}{2090-1232}
+      \field{journaltitle}{Journal of Advanced Research}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{shortjournal}{Journal of Advanced Research}
+      \field{title}{Nicotinamide mononucleotide ({NMN}) as an anti-aging health product – Promises and safety concerns}
+      \field{urlday}{4}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{37}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{267\bibrangedash 278}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.jare.2021.08.003
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2090123221001491
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2090123221001491
+      \endverb
+      \keyw{Age-induced diseases,Anti-aging,Nicotinamide adenine dinucleotide,Nicotinamide mononucleotide,Supplement}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

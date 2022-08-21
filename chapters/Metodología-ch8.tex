@@ -1,0 +1,32 @@
+\chapter{Metodología de la investigación}
+
+	Tengan mucho cuidado y describan bien lo que harán (A DETALLE)
+	
+	\inputtcb{Metas}
+	
+	\begin{longtblr}[
+			caption = {Lista de posibles materiales identificados hasta el momento},
+			label = {table:materiales_identificados}
+		]{
+			colspec = {c X},
+			hlines,
+			vlines,
+			row{odd} = {bg=background},
+			row{1} = {
+				bg = cherry,
+				fg=white,
+				font =  \large\bfseries
+			},
+			rowhead = 1,
+			column{1}={c},
+			rows = {
+				valign = m
+			},
+			cell{2-Z}{1} = {cmd=\adjusttikzpic},
+		}
+			Simbología & Descripción \\
+			centrifugal-pump
+				& \textbf{Bomba centrífuga}: Se usará para bombear agua\\
+			check-valve
+				& {\textbf{Válvula check}: Se usará para regular y mantener un flujo unidireccional}
+		\end{longtblr}

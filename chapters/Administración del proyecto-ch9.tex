@@ -1,0 +1,213 @@
+\chapter{Administración del proyecto}
+	
+	\section{Presupuesto estimado e infraestructura}
+	
+		\subsection{Recursos humanos}
+			% Esto sólo es una propuesta
+			\begin{longtblr}[
+				caption = {Tabla de Recursos humanos},
+				label = {table:recursos-humanos}
+			]{
+				colspec = {X l l c X},
+				hlines,
+				vlines,
+				row{1} = {
+					bg = cherry,
+					fg=white,
+					font = \bfseries
+				},
+				row{odd[2]} = {bg=background},
+				rows={m}
+			}
+				Nombre & Papel & Grado académico & Institución & Tiempo de trabajo \\
+				Tu nombre & Estudiante & Bachillerato técnico & escuela & 36 semanas \\
+				Tu asesor & Asesor & Doctorado & escuela & Bajo disponibilidad
+			\end{longtblr}
+	
+		\subsection{Recursos materiales}
+			% Esto sólo es una propuesta
+			\begin{longtblr}[
+				caption = {Tabla de Recursos materiales},
+				label = {table:recursos-materiales}
+			]{
+				colspec = {X c c r},
+				hlines,
+				vlines,
+				row{1} = {
+					bg = cherry,
+					fg=white,
+					font = \bfseries
+				},
+				row{odd[2]} = {bg=background},
+				rows={m},
+				cell{2-Z}{3,4} = {
+					preto = {\$},%prepend to
+				},
+			}
+				Insumos requeridos & Cantidad & Precio unitario & Total \\
+				Arduino Uno R3 [A000066] & 1 & 499 & 499 \\
+				Bomba De Agua De Diafragma \sfrac{1}{2} & 2 & 269 & 538\\
+				Soldadura de estaño de \qty{1}{\mm} & 1 tubo & 87 & 87\\
+				\SetCell[c=4]{r} {\bfseries Total: \$1124} &&&
+			\end{longtblr}
+	
+		\subsection{Recursos técnicos}
+			% Esto sólo es una propuesta
+			\begin{longtblr}[
+				caption = {Tabla de Recursos técnicos},
+				label = {table:recursos-tecnicos}
+			]{
+				colspec = {X X[2] X[2] l l},
+				hlines,
+				vlines,
+				measure=vbox,
+				row{1} = {
+					bg = cherry,
+					fg=white,
+					font = \bfseries
+				},
+				row{odd[2]} = {bg=background},
+				rows={m},
+				cell{2-Z}{5} = {
+					preto = {\$},%prepend to
+				},
+			}
+				Recurso & Descripción & Uso & Cantidad & Costo \\
+				Git y Github 
+					& Administrador de versiones
+					& Se usarán en conjunto para tener un control adecuado de los cambios del proyecto
+					& 1 Licencia y 1 cuenta
+					& 0 \\
+				Laptop o computador 
+					& {
+						\begin{itemize}[nosep]
+							\item 4 GB Memoria RAM
+							\item 12 GB Memoria interna libres
+							\item Procesador \qty{2}{\giga\hertz}
+							\item Sistema operativo:
+								\begin{itemize}[nosep]
+									\item Windows 8.1+
+									\item macOS 10.14+
+									\item Linux: Debian 9+, Ubuntu 16.04+, CentOS 7+, Fedora 30+, Alpine 3.13+, Otra distribución GLIBC 2.17+
+								\end{itemize}
+						\end{itemize}
+					} 
+					& La computadora o laptop se usará para el desarrollo de la programación requerida por el proyecto 
+					& 1
+					& 2800
+				\\
+				IntelliJ Idea community 
+					& IDE para desarrollo de JVM y Android 
+					& Se usará este software para facilitar y eficientar el desarrollo de software requerido
+					& 1
+					& 0
+				\\
+				\SetCell[c=5]{r} {\bfseries Total: \$2800}
+			\end{longtblr}
+	
+	\section{Cronograma de actividades}
+		\subsection{Trabajo terminal I}
+			\begin{longtblr}[
+				caption = {Tabla de actividades planeadas para TT1},
+				label = {table:actividades-tt1}
+			]{
+				colspec = {X *{18}c},
+				hlines,
+				vlines,
+				colsep=0.3mm,
+				row{1} = {
+					bg = cherry,
+					fg=white,
+					font =  \bfseries
+				},
+				row{odd[2]} = {bg=background},
+				rowhead = 2,
+				rows={m},
+				cell{3-4}{2} = {bg=cherry},
+				cell{5}{2-3} = {bg=cherry},
+				cell{6}{3-4} = {bg=cherry},
+				cell{7}{5-6} = {bg=cherry},
+				cell{8}{5-7} = {bg=cherry},
+				cell{9}{6-7} = {bg=cherry},
+				cell{10}{7-8} = {bg=cherry},
+				cell{11}{8-10} = {bg=cherry},
+				cell{12}{11-12} = {bg=cherry},
+				cell{13}{12-14} = {bg=cherry},
+				cell{14}{14-16} = {bg=cherry},
+				cell{15}{15-17} = {bg=cherry},
+				cell{16}{18-19} = {bg=cherry},
+				cell{17}{9-19} = {bg=cherry},
+			}
+
+				\SetCell[c=19]{c} Trabajo terminal I (semanas) &&&&&&&&&&&&&&&&&\\
+				Actividad & 01 & 02 & 03 & 04 & 05 & 06 & 07 & 08 & 09 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 \\
+				ACTIVIDAD 1 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 2 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 3 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 4 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 5 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 6 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 7 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 8 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 9 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 10 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 11 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 12 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 13 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 14 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 15 &&&&&&&&&&&&&&&&&&
+			\end{longtblr}
+			
+		\subsection{Trabajo terminal II}
+			
+					
+			\begin{longtblr}[
+				caption = {Tabla de actividades planeadas para TT2},
+				label = {table:actividades-tt2}
+			]{
+				colspec = {X *{18}c},
+				hlines,
+				vlines,
+				colsep=0.3mm,
+				row{1} = {
+					bg = cherry,
+					fg=white,
+					font =  \large\bfseries
+				},
+				row{odd[2]} = {bg=background},
+				rowhead = 2,
+				rows={m},
+				cell{3-4}{2} = {bg=cherry},
+				cell{5}{2-3} = {bg=cherry},
+				cell{6}{3-4} = {bg=cherry},
+				cell{7}{5-6} = {bg=cherry},
+				cell{8}{5-7} = {bg=cherry},
+				cell{9}{6-7} = {bg=cherry},
+				cell{10}{7-8} = {bg=cherry},
+				cell{11}{8-10} = {bg=cherry},
+				cell{12}{11-12} = {bg=cherry},
+				cell{13}{12-14} = {bg=cherry},
+				cell{14}{14-16} = {bg=cherry},
+				cell{15}{15-17} = {bg=cherry},
+				cell{16}{18-19} = {bg=cherry},
+				cell{17}{9-19} = {bg=cherry},
+			}
+
+				\SetCell[c=19]{c} Trabajo terminal II (semanas) &&&&&&&&&&&&&&&&&\\
+				Actividad & 01 & 02 & 03 & 04 & 05 & 06 & 07 & 08 & 09 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 \\
+				ACTIVIDAD 1 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 2 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 3 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 4 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 5 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 6 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 7 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 8 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 9 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 10 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 11 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 12 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 13 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 14 &&&&&&&&&&&&&&&&&&\\
+				ACTIVIDAD 15 &&&&&&&&&&&&&&&&&&
+			\end{longtblr}

@@ -1,0 +1,66 @@
+\documentclass[12pt]{report}
+
+% Se incluye el preámbulo, archivo donde se encuentran
+% los paquetes, la configuración y los comandos definidos
+\input{Preámbulo.tex}
+
+\begin{document}
+	% Se detiene la numeración
+	\pagenumbering{gobble}
+	
+	% Se inicia la portada
+	\begin{coverpage}
+		% Se incluye el archivo de la portada
+		\input{beginning/Portada.tex}
+	\end{coverpage}
+	\newpage
+	
+	% Índice, lista de figuras y lista de tablas
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	\newpage
+	% Abreviaciones y acrónimos
+	\glsfindwidesttoplevelname[\acronymtype]
+	\printglossary[
+		style=custommcolalttree,
+		type=\acronymtype,
+		title=Abreviaciones y acrónimos,
+		nonumberlist
+	]
+	
+	% Glosario
+	\glsfindwidesttoplevelname[\glsdefaulttype]
+	\printglossary[style=alttree, nonumberlist]
+	\newpage
+	
+	% Se reanuda la numeración arábiga
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	
+	% Se incluyen los archivos del contenido
+	\input{beginning/Resumen.tex}	
+	\input{chapters/Introducción-ch1.tex}
+	\input{chapters/Planteamiento-ch2.tex}
+	\input{chapters/Justificación-ch3.tex}
+	\input{chapters/Objetivos-ch4.tex}
+	\input{chapters/Antecedentes-ch5.tex}
+	\input{chapters/Estado del arte-ch6.tex}
+	\input{chapters/Marco teórico-ch7.tex}
+	\input{chapters/Metodología-ch8.tex}
+	\input{chapters/Administración del proyecto-ch9.tex}
+	\input{chapters/Resultados-ch10.tex}
+	
+	\clearpage
+	\newpage	
+	
+	% Se imprimen las referencias
+	\printbibliography[heading=bibintoc]
+	
+	% Se inicia la sección de apéndices
+	\appendix
+	
+	% Se incluyen todos los apéndices
+	\input{appendix/Arduino-datasheet.tex}
+\end{document}

@@ -1,0 +1,96 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tipografía y color
+
+%Listas
+
+\SetEnumitemKey{columns}{
+	before = \begin{multicols}{#1},
+	after = \end{multicols}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dibujos y diagramas
+
+\pgfkeys{/forest,
+	rect/.append style = {
+		rectangle,
+		rounded corners=5pt,
+		/tikz/align=center,
+		inner color=background,
+		drop shadow,
+	},
+	circ/.append style = {circle, /tikz/align=center}	
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forest curly bracket edges
+
+\forestset{
+    declare dimen = {curly bracket sep}{0.5em},
+    curly bracket edge’/.style={
+        edge={rotate/.option=!parent.grow},
+        edge path'= {
+			[
+				color=linecol,
+				rounded corners=5pt,
+				>={Stealth[length=8pt]},
+				line width=0.5pt,
+				->
+			]
+				% !u. means up (upper parent)
+				(!u.parent anchor) -- ++(\forestoption{curly bracket sep},0) |- (.child anchor)
+		},
+    },
+    curly bracket edge/.style={
+        on invalid={fake}{!parent.parent anchor=children},
+        child anchor=parent,
+        curly bracket edge’
+    },
+    curly bracket edges/.style={for nodewalk={#1}{curly bracket edge}},
+    curly bracket edges/.default=tree,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forest arrowed folder edges
+
+\forestset{
+	declare dimen register=arrowed folder indent,
+	arrowed folder indent=0.45em,
+	arrowed folder/.style={
+		parent anchor=-children last,
+		anchor=parent first,
+		calign=child,
+		calign primary child=1,
+		for children={
+			child anchor=parent,
+			anchor=parent first,
+			edge={rotate/.option=!parent.grow},
+			edge path'/.expanded={
+				[
+					color=linecol,
+					rounded corners=2pt,
+					>={Stealth[length=6pt]},
+					line width=0.5pt,
+					->
+				]
+				([xshift=\forestregister{arrowed folder indent}]!u.parent anchor) |- (.child anchor)
+			},
+		},
+		after packing node={
+			if n children=0{}{
+				tempdiml=l_sep()-1*l("!1"),
+				tempdims={-abs(max_s("","")-min_s("",""))-s_sep()},
+				for children={
+					l+=tempdiml,
+					s+=tempdims()*(reversed()-0.5)*2,
+				},
+			},
+		},
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
